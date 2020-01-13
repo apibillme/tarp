@@ -1,5 +1,7 @@
 ## Tarp - Code Coverage Tool
 
+[![crates.io](https://meritbadge.herokuapp.com/tarp)](https://crates.io/crates/tarp)
+
 ### Purpose
 
 Provide a Rust Code Coverage tool that works with Snap and Travis CI
