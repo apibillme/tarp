@@ -7,7 +7,7 @@ repository = "https://github.com/apibillme/tarp"
 readme = "README.md"
 license = "MIT"
 categories = ["development-tools"]
-keywords = ["code-coverage", "codecov", "testing"]
+keywords = ["code-coverage", "codecov", "testing", "travis-ci"]
 edition = "2018"
 autotests = false
 
