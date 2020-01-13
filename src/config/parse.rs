@@ -38,14 +38,13 @@ pub(super) fn get_manifest(args: &ArgMatches) -> PathBuf {
         return path;
     }
 
-    let mut manifest = env::current_dir().unwrap();
+    let x = env::current_dir().unwrap();
+    let z = x.to_str().unwrap();
 
-    if let Some(path) = args.value_of("root") {
-        manifest.push(path);
-    }
-
-    manifest.push("Cargo.toml");
-    manifest.canonicalize().unwrap_or(manifest)
+    let p = format!("{}/Cargo.toml", z);
+    let mut path = PathBuf::new();
+    path.push(p);
+    path
 }
 
 pub(super) fn get_target_dir(args: &ArgMatches) -> Option<PathBuf> {

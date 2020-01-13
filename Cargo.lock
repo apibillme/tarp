@@ -168,37 +168,6 @@ dependencies = [
 ]
 
 [[package]]
-name = "cargo-tarpaulin"
-version = "0.10.0"
-dependencies = [
- "cargo",
- "chrono",
- "clap",
- "coveralls-api",
- "env_logger 0.7.1",
- "failure",
- "fallible-iterator",
- "gimli",
- "git2",
- "lazy_static",
- "libc",
- "log",
- "memmap",
- "nix",
- "object",
- "proc-macro2",
- "quick-xml",
- "quote",
- "regex",
- "rustc-demangle",
- "serde",
- "serde_json",
- "syn",
- "void",
- "walkdir",
-]
-
-[[package]]
 name = "cc"
 version = "1.0.48"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -1299,6 +1268,37 @@ name = "target-lexicon"
 version = "0.9.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "6f4c118a7a38378f305a9e111fcb2f7f838c0be324bfb31a77ea04f7f6e684b4"
+
+[[package]]
+name = "tarp"
+version = "0.10.0"
+dependencies = [
+ "cargo",
+ "chrono",
+ "clap",
+ "coveralls-api",
+ "env_logger 0.7.1",
+ "failure",
+ "fallible-iterator",
+ "gimli",
+ "git2",
+ "lazy_static",
+ "libc",
+ "log",
+ "memmap",
+ "nix",
+ "object",
+ "proc-macro2",
+ "quick-xml",
+ "quote",
+ "regex",
+ "rustc-demangle",
+ "serde",
+ "serde_json",
+ "syn",
+ "void",
+ "walkdir",
+]
 
 [[package]]
 name = "tempfile"

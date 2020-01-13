@@ -1,6 +1,0 @@
-.*
-target
-*.md
-!README.md
-tests
-

@@ -1,5 +1,5 @@
-use cargo_tarpaulin::config::*;
-use cargo_tarpaulin::run;
+use tarp::config::*;
+use tarp::run;
 use clap::{crate_version, App, Arg, ArgSettings, SubCommand};
 use env_logger::Builder;
 use log::trace;
@@ -19,11 +19,11 @@ fn set_up_logging(debug: bool, verbose: bool) {
 
     // NOTE: This overwrites RUST_LOG
     if debug {
-        builder.filter_module("cargo_tarpaulin", log::LevelFilter::Trace);
+        builder.filter_module("tarp", log::LevelFilter::Trace);
     } else if verbose {
-        builder.filter_module("cargo_tarpaulin", log::LevelFilter::Debug);
+        builder.filter_module("tarp", log::LevelFilter::Debug);
     } else {
-        builder.filter_module("cargo_tarpaulin", log::LevelFilter::Info);
+        builder.filter_module("tarp", log::LevelFilter::Info);
     }
 
     builder
@@ -46,12 +46,12 @@ If you are interfacing with coveralls.io or another site you can \
 also specify a name that they will recognise. Refer to their documentation for this.";
 
 fn main() -> Result<(), String> {
-    let args = App::new("cargo-tarpaulin")
+    let args = App::new("tarp")
         .author("Daniel McKenna, <danielmckenna93@gmail.com>")
         .about("Tool to analyse test coverage of cargo projects")
         .version(concat!("version: ", crate_version!()))
         .bin_name("cargo")
-        .subcommand(SubCommand::with_name("tarpaulin")
+        .subcommand(SubCommand::with_name("tarp")
             .about("Tool to analyse test coverage of cargo projects")
             .version(concat!("version: ", crate_version!()))
             .args_from_usage(
@@ -103,7 +103,7 @@ fn main() -> Result<(), String> {
             ]))
         .get_matches();
 
-    let args = args.subcommand_matches("tarpaulin").unwrap_or(&args);
+    let args = args.subcommand_matches("tarp").unwrap_or(&args);
     let config = Config::from(args);
 
     set_up_logging(config.debug, config.verbose);

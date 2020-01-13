@@ -1,7 +1,7 @@
 use crate::utils::get_test_path;
-use cargo_tarpaulin::config::Config;
-use cargo_tarpaulin::launch_tarpaulin;
-use cargo_tarpaulin::traces::CoverageStat;
+use tarp::config::Config;
+use tarp::launch_tarpaulin;
+use tarp::traces::CoverageStat;
 use std::env;
 use std::time::Duration;
 

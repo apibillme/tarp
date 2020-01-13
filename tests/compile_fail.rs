@@ -1,6 +1,6 @@
 use crate::utils::get_test_path;
-use cargo_tarpaulin::launch_tarpaulin;
-use cargo_tarpaulin::{config::Config, errors::RunError};
+use tarp::launch_tarpaulin;
+use tarp::{config::Config, errors::RunError};
 use std::env;
 
 #[test]
