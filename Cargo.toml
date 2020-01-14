@@ -1,6 +1,6 @@
 [package]
 name = "tarp"
-version = "0.10.0"
+version = "0.10.1"
 authors = ["Bevan Hunt <bevan@bevanhunt.com>"]
 description = "Tarp is a code coverage tool"
 repository = "https://github.com/apibillme/tarp"

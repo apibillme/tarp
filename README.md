@@ -30,7 +30,7 @@ fn main() {
 ```yaml
 language: rust
 sudo: required
-dist: trusty
+dist: bionic
 addons:
     apt:
         packages:

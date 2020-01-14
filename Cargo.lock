@@ -1271,7 +1271,7 @@ checksum = "6f4c118a7a38378f305a9e111fcb2f7f838c0be324bfb31a77ea04f7f6e684b4"
 
 [[package]]
 name = "tarp"
-version = "0.10.0"
+version = "0.10.1"
 dependencies = [
  "cargo",
  "chrono",
